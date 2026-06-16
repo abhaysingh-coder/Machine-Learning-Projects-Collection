@@ -1,0 +1,178 @@
+{% extends 'loan_approval_decision_treebase.html' %}
+
+{% block title %}
+Loan Approval Prediction Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Loan Approval Prediction System</h1>
+
+            <p>
+                Predict whether a loan application is likely to be approved
+                using the Decision Tree Classification Algorithm.
+            </p>
+
+            <a href="{% url 'loan_approval_decision_tree:Prediction' %}" class="start-btn">
+
+                <i class="fa-solid fa-file-circle-check"></i>
+
+                Start Prediction
+
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-money-check-dollar"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-file-signature"></i>
+
+        <h3>Loan Applications</h3>
+
+        <p>Approval Analysis</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-code-branch"></i>
+
+        <h3>Algorithm</h3>
+
+        <p>Decision Tree</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Dataset</h3>
+
+        <p>Loan Approval Dataset</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>Model Type</h3>
+
+        <p>Classification</p>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Available functionalities in the Loan Approval Prediction System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Applicant Analysis</h3>
+
+            <p>
+                Evaluate applicant information for loan approval prediction.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <h3>Loan Eligibility</h3>
+
+            <p>
+                Determine whether an applicant qualifies for loan approval.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Prediction</h3>
+
+            <p>
+                Generate approval results instantly using Machine Learning.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Decision Tree Model</h3>
+
+            <p>
+                Predict loan approval using Decision Tree Classification.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This project predicts whether a loan application is approved
+            or rejected based on applicant details such as income,
+            employment status, education, credit history, and other
+            financial information.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

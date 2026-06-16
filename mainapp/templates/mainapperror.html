@@ -1,0 +1,43 @@
+{% extends 'mainappbase.html' %}
+
+{% block title %}
+Error
+{% endblock %}
+
+{% block content %}
+
+<section class="error-page">
+
+    <div class="error-container">
+
+        <div class="error-card">
+
+            <div class="error-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+
+            <h1>Oops! Something Went Wrong</h1>
+
+            <p>
+                An unexpected error occurred while processing your request.
+            </p>
+
+            {% if error %}
+            <div class="error-message">
+                <strong>Error Details:</strong>
+                <p>{{ error }}</p>
+            </div>
+            {% endif %}
+
+            <a href="/" class="home-btn">
+                <i class="fa-solid fa-house"></i>
+                Back To Home
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends 'heart_disease_svmbase.html' %}
+
+{% block title %}
+Heart Disease SVM Prediction
+{% endblock %}
+
+{% block page_title %}
+Heart Disease SVM Prediction
+{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-heart-pulse"></i>
+                Patient Health Details
+            </h2>
+
+            <p>
+                Enter patient health information to predict heart disease risk using SVM.
+            </p>
+        </div>
+
+        <form method="post" class="prediction-form">
+
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" name="Age" placeholder="Example: 45" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Sex</label>
+                    <select name="Sex" required>
+                        <option value="">Select Sex</option>
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Blood Pressure</label>
+                    <input type="number" name="BP" placeholder="Example: 130" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Cholesterol</label>
+                    <input type="number" name="Cholesterol" placeholder="Example: 230" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Maximum Heart Rate</label>
+                    <input type="number" name="Max_HR" placeholder="Example: 150" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-stethoscope"></i>
+                Predict Heart Disease
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 1 %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-heart-circle-exclamation"></i>
+        </div>
+
+        <h2>Heart Disease Risk Detected</h2>
+
+        <p>
+            The SVM model predicts that the patient may have heart disease risk.
+        </p>
+
+        {% else %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-heart-circle-check"></i>
+        </div>
+
+        <h2>No Heart Disease Risk Detected</h2>
+
+        <p>
+            The SVM model predicts that the patient is not likely to have heart disease.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

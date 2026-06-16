@@ -1,0 +1,91 @@
+{% extends 'loan_approval_random_forestbase.html' %}
+
+{% block title %}Loan Approval Prediction{% endblock %}
+{% block page_title %}Loan Approval Prediction{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-money-check-dollar"></i>
+                Applicant Details
+            </h2>
+            <p>Enter applicant details to predict loan approval status.</p>
+        </div>
+
+        <form method="post" class="prediction-form">
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" name="Age" placeholder="Example: 25" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Income</label>
+                    <input type="number" name="Income" placeholder="Example: 30000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Credit Score</label>
+                    <input type="number" name="CreditScore" placeholder="Example: 650" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Experience</label>
+                    <input type="number" name="Experience" placeholder="Example: 2" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Loan Amount</label>
+                    <input type="number" name="LoanAmount" placeholder="Example: 100000" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-brain"></i>
+                Predict Approval
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 1 %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Loan Approved</h2>
+        <p>The Random Forest model predicts that this loan may be approved.</p>
+
+        {% else %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <h2>Loan Rejected</h2>
+        <p>The Random Forest model predicts that this loan may be rejected.</p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

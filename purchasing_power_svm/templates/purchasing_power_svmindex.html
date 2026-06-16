@@ -1,0 +1,179 @@
+{% extends 'purchasing_power_svmbase.html' %}
+
+{% block title %}
+Purchasing Power Prediction Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Purchasing Power Prediction Using SVM</h1>
+
+            <p>
+                Predict whether a customer is likely to purchase a product
+                based on customer characteristics using the Support Vector
+                Machine (SVM) Classification Algorithm.
+            </p>
+
+            <a href="{% url 'purchasing_power_svm:Prediction' %}" class="start-btn">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Start Prediction
+
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-users"></i>
+
+        <h3>Customers</h3>
+
+        <p>Purchase Analysis</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-vector-square"></i>
+
+        <h3>Algorithm</h3>
+
+        <p>Support Vector Machine</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Dataset</h3>
+
+        <p>Customer Purchase Dataset</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        <h3>Model Type</h3>
+
+        <p>Classification</p>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Available functionalities in the Purchasing Power Prediction System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Customer Analysis</h3>
+
+            <p>
+                Analyze customer information and purchasing trends.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <h3>Buying Behavior</h3>
+
+            <p>
+                Determine whether a customer is likely to make a purchase.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Prediction</h3>
+
+            <p>
+                Generate customer purchase predictions instantly.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>SVM Classification</h3>
+
+            <p>
+                Advanced classification using Support Vector Machine.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This project predicts whether a customer may purchase a product
+            based on factors such as Age, Income, and Loan Status.
+            Support Vector Machine (SVM) identifies optimal decision boundaries
+            for accurate customer classification.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

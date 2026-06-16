@@ -1,0 +1,104 @@
+{% extends 'heart_disease_svmbase.html' %}
+
+{% block title %}
+Heart Disease SVM Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Healthcare ML Project
+            </span>
+
+            <h1>Heart Disease Prediction Using SVM</h1>
+
+            <p>
+                Predict heart disease risk using patient health details and
+                Support Vector Machine classification.
+            </p>
+
+            <a href="{% url 'heart_disease_svm:Prediction' %}" class="start-btn">
+                <i class="fa-solid fa-stethoscope"></i>
+                Start Prediction
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-heart-circle-bolt"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h3>Healthcare Analytics</h3>
+        <p>Heart Disease Risk Prediction</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-brain"></i>
+        <h3>Algorithm</h3>
+        <p>Support Vector Machine</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Dataset</h3>
+        <p>Heart Disease Dataset</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Prediction Type</h3>
+        <p>Binary Classification</p>
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+        <h2>Project Features</h2>
+        <p>Available features in Heart Disease SVM Prediction System</p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>Patient Analysis</h3>
+            <p>Analyze medical and health-related patient information.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-heart-circle-check"></i>
+            <h3>Disease Prediction</h3>
+            <p>Predict whether the patient has heart disease risk or not.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Fast Result</h3>
+            <p>Get instant classification output from the SVM model.</p>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends 'sales_medium_lassobase.html' %}
+
+{% block title %}Sales Medium Prediction Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Sales Medium Prediction Using Lasso Regression</h1>
+
+            <p>
+                Predict sales performance using Lasso Regression.
+                Analyze sales metrics and estimate future sales values
+                based on business indicators and marketing performance.
+            </p>
+
+            <a href="{% url 'sales_medium_lasso:Prediction' %}" class="start-btn">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Start Prediction
+
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-sack-dollar"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-column"></i>
+
+        <h3>Sales Data</h3>
+
+        <p>Business Analytics</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-sliders"></i>
+
+        <h3>Algorithm</h3>
+
+        <p>Lasso Regression</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Dataset</h3>
+
+        <p>Sales Performance Dataset</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-area"></i>
+
+        <h3>Model Type</h3>
+
+        <p>Regression</p>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Explore the capabilities of the Sales Medium Prediction System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Sales Forecasting</h3>
+
+            <p>
+                Predict future sales values based on business metrics.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <h3>Marketing Analysis</h3>
+
+            <p>
+                Evaluate the impact of marketing and advertising efforts.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Prediction</h3>
+
+            <p>
+                Generate accurate sales predictions instantly.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Lasso Regression</h3>
+
+            <p>
+                Feature selection and prediction using L1 regularization.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This project uses Lasso Regression to predict sales values.
+            Lasso helps improve prediction accuracy by selecting the
+            most important features and reducing unnecessary variables.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

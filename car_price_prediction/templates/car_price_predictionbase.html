@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Car Price Prediction Panel
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'CSS/car_price_prediction.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shortcut icon" href="{% static 'Image/car_price_prediction_favicon.png' %}" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <i class="fa-solid fa-car-side"></i>
+                <span>Car Price</span>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+                    <a href="{% url 'car_price_prediction:Index' %}">
+                        <i class="fa-solid fa-gauge"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'car_price_prediction:Prediction' %}">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Prediction
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'car_price_prediction:About' %}">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'mainapp:Index' %}">
+                        <i class="fa-solid fa-house"></i>
+                        Back
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Area -->
+
+        <div class="main-area">
+
+            <!-- Topbar -->
+
+            <header class="topbar">
+
+                <h2>
+                    {% block page_title %}
+                    Dashboard
+                    {% endblock %}
+                </h2>
+
+                <a href="{% url 'mainapp:Index' %}" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </a>
+
+            </header>
+
+            <!-- Content -->
+
+            <main class="content">
+
+                {% block content %}
+                {% endblock %}
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

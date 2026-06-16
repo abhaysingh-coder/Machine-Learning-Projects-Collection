@@ -1,0 +1,248 @@
+{% extends 'result_predictor_svmbase.html' %}
+
+{% block title %}
+About Result Predictor SVM
+{% endblock %}
+
+{% block page_title %}
+About Model
+{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+
+    <div class="about-hero">
+
+        <div class="hero-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <h1>Result Prediction Using Support Vector Machine</h1>
+
+        <p>
+            This Machine Learning application predicts whether a student
+            is likely to pass or fail based on learning activities,
+            study habits, assignments, and engagement metrics.
+        </p>
+
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h3>Project Objective</h3>
+
+            <p>
+                To identify students at risk and predict academic
+                performance using educational activity data.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-vector-square"></i>
+
+            <h3>Algorithm Used</h3>
+
+            <p>
+                Support Vector Machine (SVM) is used to classify
+                students into Pass and Fail categories.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>Input Features</h3>
+
+            <p>
+                Study Hours, Videos Watched, Assignments Completed,
+                Forum Activity and Days Inactive.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Prediction Output</h3>
+
+            <p>
+                Predicts whether a student is likely
+                to Pass or Fail.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="dataset-section">
+
+    <div class="dataset-card">
+
+        <h2>
+            <i class="fa-solid fa-table"></i>
+            Dataset Information
+        </h2>
+
+        <div class="dataset-grid">
+
+            <div>
+                <span>Problem Type</span>
+                <h3>Classification</h3>
+            </div>
+
+            <div>
+                <span>Target</span>
+                <h3>Result</h3>
+            </div>
+
+            <div>
+                <span>Algorithm</span>
+                <h3>SVM</h3>
+            </div>
+
+            <div>
+                <span>Output</span>
+                <h3>Pass / Fail</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="feature-section">
+
+    <div class="feature-info-card">
+
+        <h2>
+            <i class="fa-solid fa-list-check"></i>
+            Key Evaluation Factors
+        </h2>
+
+        <div class="feature-grid">
+
+            <div>
+                <h4>Study Hours</h4>
+                <p>Weekly study effort and dedication.</p>
+            </div>
+
+            <div>
+                <h4>Videos Watched</h4>
+                <p>Learning content consumption.</p>
+            </div>
+
+            <div>
+                <h4>Assignments Completed</h4>
+                <p>Assignment completion performance.</p>
+            </div>
+
+            <div>
+                <h4>Forum Activity</h4>
+                <p>Student participation and interaction.</p>
+            </div>
+
+            <div>
+                <h4>Days Inactive</h4>
+                <p>Learning gaps and inactivity periods.</p>
+            </div>
+
+            <div>
+                <h4>Overall Engagement</h4>
+                <p>Combined learning behavior assessment.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="technology-section">
+
+    <h2>Technology Stack</h2>
+
+    <div class="technology-grid">
+
+        <div class="tech-card">
+            <i class="fa-brands fa-python"></i>
+            <span>Python</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-server"></i>
+            <span>Django</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-brain"></i>
+            <span>Scikit-Learn</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-table"></i>
+            <span>Pandas</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-calculator"></i>
+            <span>NumPy</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-floppy-disk"></i>
+            <span>Joblib</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="developer-section">
+
+    <div class="developer-card">
+
+        <div class="developer-avatar">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <h2>Developer</h2>
+
+        <h3>Abhay Singh</h3>
+
+        <p>
+            Computer Science Engineer, Python Developer,
+            Django Developer and Machine Learning Enthusiast.
+        </p>
+
+        <div class="developer-links">
+
+            <a href="https://github.com/abhaysingh-coder" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
+
+            <a href="mailto:srinetabhaysingh14@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

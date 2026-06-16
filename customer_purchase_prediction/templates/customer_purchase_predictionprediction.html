@@ -1,0 +1,119 @@
+{% extends 'customer_purchase_predictionbase.html' %}
+
+{% block title %}
+Customer Purchase Prediction
+{% endblock %}
+
+{% block page_title %}
+Customer Purchase Prediction
+{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+
+            <h2>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Customer Purchase Prediction
+            </h2>
+
+            <p>
+                Enter customer details below to predict whether the customer will purchase the product.
+            </p>
+
+        </div>
+
+        <form method="post" class="prediction-form">
+
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        <i class="fa-solid fa-user"></i>
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        name="Age"
+                        min="18"
+                        max="100"
+                        placeholder="Enter Customer Age"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        Estimated Salary
+                    </label>
+
+                    <input
+                        type="number"
+                        name="EstimatedSalary"
+                        min="0"
+                        placeholder="Enter Estimated Salary"
+                        required>
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+
+                <i class="fa-solid fa-brain"></i>
+
+                Predict Purchase
+
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 1 %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Customer Will Purchase</h2>
+
+        <p>
+            Based on the provided information, the customer is likely to purchase the product.
+        </p>
+
+        {% else %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <h2>Customer Will Not Purchase</h2>
+
+        <p>
+            Based on the provided information, the customer is unlikely to purchase the product.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

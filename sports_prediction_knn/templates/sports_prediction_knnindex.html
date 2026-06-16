@@ -1,0 +1,134 @@
+{% extends 'sports_prediction_knnbase.html' %}
+
+{% block title %}Sports Prediction Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Sports Performance Prediction Using KNN</h1>
+
+            <p>
+                Predict sports performance, player outcomes, and match-related
+                results using the K-Nearest Neighbors (KNN) Machine Learning
+                Algorithm.
+            </p>
+
+            <a href="{% url 'sports_prediction_knn:Prediction' %}" class="start-btn">
+                <i class="fa-solid fa-trophy"></i>
+                Start Prediction
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-medal"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <i class="fa-solid fa-person-running"></i>
+        <h3>Players</h3>
+        <p>Performance Analysis</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-network-wired"></i>
+        <h3>Algorithm</h3>
+        <p>K-Nearest Neighbors</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Dataset</h3>
+        <p>Sports Performance Dataset</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Model Type</h3>
+        <p>Classification</p>
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+        <h2>Project Features</h2>
+        <p>Key functionalities of the Sports Prediction System.</p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Player Analysis</h3>
+            <p>
+                Analyze player performance and activity metrics.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-ranking-star"></i>
+            <h3>Performance Prediction</h3>
+            <p>
+                Predict sports performance categories accurately.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Instant Results</h3>
+            <p>
+                Generate predictions instantly using KNN.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Machine Learning</h3>
+            <p>
+                Advanced prediction using nearest-neighbor classification.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This Sports Prediction System uses the K-Nearest Neighbors (KNN)
+            algorithm to classify sports performance based on player statistics,
+            training metrics, and performance indicators. The model helps
+            coaches, analysts, and players evaluate athletic outcomes.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

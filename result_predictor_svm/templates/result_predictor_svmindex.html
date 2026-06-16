@@ -1,0 +1,118 @@
+{% extends 'result_predictor_svmbase.html' %}
+
+{% block title %}Result Predictor Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+            <span class="banner-badge">Machine Learning Project</span>
+
+            <h1>Result Prediction Using SVM</h1>
+
+            <p>
+                Predict student result status based on study activity,
+                assignments, video learning, forum activity, and inactivity days.
+            </p>
+
+            <a href="{% url 'result_predictor_svm:Prediction' %}" class="start-btn">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Start Prediction
+            </a>
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-square-poll-vertical"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <i class="fa-solid fa-user-graduate"></i>
+        <h3>Students</h3>
+        <p>Learning Analysis</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-vector-square"></i>
+        <h3>Algorithm</h3>
+        <p>Support Vector Machine</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Dataset</h3>
+        <p>Student Activity Dataset</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Model Type</h3>
+        <p>Classification</p>
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+        <h2>Project Features</h2>
+        <p>Available functionalities in the Result Predictor SVM system.</p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Study Analysis</h3>
+            <p>Analyze study hours and learning behavior.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-video"></i>
+            <h3>Video Learning</h3>
+            <p>Use watched videos as a learning activity factor.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <h3>Assignment Tracking</h3>
+            <p>Evaluate assignment completion performance.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>SVM Prediction</h3>
+            <p>Classify student result using Support Vector Machine.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This project predicts student result status using learning activity
+            data such as study hours, videos watched, assignments completed,
+            forum activity, and inactive days.
+        </p>
+    </div>
+
+</section>
+
+{% endblock %}

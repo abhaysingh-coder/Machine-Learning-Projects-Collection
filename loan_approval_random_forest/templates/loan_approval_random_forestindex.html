@@ -1,0 +1,175 @@
+{% extends 'loan_approval_random_forestbase.html' %}
+
+{% block title %}
+Loan Approval Random Forest Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Loan Approval Prediction Using Random Forest</h1>
+
+            <p>
+                Predict whether a loan application will be approved or rejected
+                using the Random Forest Classification Algorithm.
+            </p>
+
+            <a href="{% url 'loan_approval_random_forest:Prediction' %}" class="start-btn">
+                <i class="fa-solid fa-file-circle-check"></i>
+                Start Prediction
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-money-check-dollar"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-file-signature"></i>
+
+        <h3>Loan Applications</h3>
+
+        <p>Approval Analysis</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-tree"></i>
+
+        <h3>Algorithm</h3>
+
+        <p>Random Forest</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Dataset</h3>
+
+        <p>Loan Approval Dataset</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>Model Type</h3>
+
+        <p>Classification</p>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Available functionalities in the Loan Approval Random Forest System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Applicant Analysis</h3>
+
+            <p>
+                Analyze applicant information before loan approval.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <h3>Loan Eligibility</h3>
+
+            <p>
+                Determine whether a loan should be approved or rejected.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Fast Prediction</h3>
+
+            <p>
+                Generate instant loan approval results.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-tree"></i>
+
+            <h3>Random Forest Model</h3>
+
+            <p>
+                Multiple decision trees improve prediction accuracy.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This project predicts loan approval status using applicant details
+            such as age, income, credit score, and loan amount. The Random Forest
+            algorithm combines multiple decision trees to provide highly accurate
+            approval predictions.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'loan_approval_decision_treebase.html' %}
+
+{% block title %}
+Loan Approval Prediction
+{% endblock %}
+
+{% block page_title %}
+Loan Approval Prediction
+{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-file-circle-check"></i>
+                Applicant Loan Details
+            </h2>
+
+            <p>
+                Enter applicant details to predict whether the loan will be approved or rejected.
+            </p>
+        </div>
+
+        <form method="post" class="prediction-form">
+
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" name="Age" placeholder="Example: 25" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Income</label>
+                    <input type="number" name="Income" placeholder="Example: 30000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Credit Score</label>
+                    <input type="number" name="Credit_Score" placeholder="Example: 650" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Loan Amount</label>
+                    <input type="number" name="Loan_Amount" placeholder="Example: 100000" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-building-columns"></i>
+                Predict Loan Status
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result %}
+
+    <div class="result-card">
+
+        {% if result == 'Approved' %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Loan Approved</h2>
+
+        <p>
+            The Decision Tree model predicts that this loan application may be approved.
+        </p>
+
+        {% else %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <h2>Loan Rejected</h2>
+
+        <p>
+            The Decision Tree model predicts that this loan application may be rejected.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

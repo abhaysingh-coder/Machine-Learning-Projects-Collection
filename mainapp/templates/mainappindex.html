@@ -1,0 +1,182 @@
+{% extends 'mainappbase.html' %}
+{% load static %}
+
+{% block title %}
+Home | ML Models Portfolio
+{% endblock %}
+
+{% block content %}
+
+<section class="home-page">
+
+    <div class="home-content">
+
+        <span class="home-badge">
+            <i class="fa-solid fa-brain"></i>
+            Machine Learning Project
+        </span>
+
+        <h1>
+            Machine Learning Models Portfolio
+        </h1>
+
+        <p>
+            A Django based website containing multiple Machine Learning models
+            for prediction and classification tasks.
+        </p>
+
+        <div class="home-buttons">
+            <a href="{% url 'mainapp:Models' %}" class="primary-btn">
+                Explore Models
+            </a>
+
+            <a href="https://github.com/abhaysingh-coder" target="_blank" class="secondary-btn">
+                GitHub Profile
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home-stats">
+
+    <div class="stat-card">
+        <h2>17+</h2>
+        <p>ML Models</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>7+</h2>
+        <p>Algorithms</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>Django</h2>
+        <p>Web Framework</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>Python</h2>
+        <p>Backend Language</p>
+    </div>
+
+</section>
+
+<section class="models-section" id="models">
+
+    <div class="section-title">
+        <span>Available Projects</span>
+        <h2>Explore ML Models</h2>
+        <p>Click any model card to open its prediction system.</p>
+    </div>
+
+    <div class="models-grid">
+
+        <a href="{% url 'car_price_prediction:Index' %}" class="model-box">
+            <i class="fa-solid fa-car"></i>
+            <h3>Car Price Prediction</h3>
+            <p>Simple Linear Regression</p>
+        </a>
+
+        <a href="{% url 'customer_purchase_prediction:Index' %}" class="model-box">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>Customer Purchase Prediction</h3>
+            <p>Logistic Regression</p>
+        </a>
+
+        <a href="{% url 'employee_attrition_prediction:Index' %}" class="model-box">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Employee Attrition Prediction</h3>
+            <p>Random Forest</p>
+        </a>
+
+        <a href="{% url 'heart_disease_logistic_regression:Index' %}" class="model-box">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Heart Disease Prediction</h3>
+            <p>Logistic Regression</p>
+        </a>
+
+        <a href="{% url 'heart_disease_svm:Index' %}" class="model-box">
+            <i class="fa-solid fa-stethoscope"></i>
+            <h3>Heart Disease SVM</h3>
+            <p>Support Vector Machine</p>
+        </a>
+
+        <a href="{% url 'iris_flower_decision_tree:Index' %}" class="model-box">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Iris Flower Decision Tree</h3>
+            <p>Decision Tree</p>
+        </a>
+
+        <a href="{% url 'iris_flower_knn:Index' %}" class="model-box">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Iris Flower KNN</h3>
+            <p>KNN Algorithm</p>
+        </a>
+
+        <a href="{% url 'loan_approval_decision_tree:Index' %}" class="model-box">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <h3>Loan Approval Decision Tree</h3>
+            <p>Decision Tree</p>
+        </a>
+
+        <a href="{% url 'loan_approval_random_forest:Index' %}" class="model-box">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Loan Approval Random Forest</h3>
+            <p>Random Forest</p>
+        </a>
+
+        <a href="{% url 'placement_predictor_decision_tree:Index' %}" class="model-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Placement Predictor</h3>
+            <p>Decision Tree</p>
+        </a>
+
+        <a href="{% url 'purchasing_power_logistic_regression:Index' %}" class="model-box">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Purchasing Power Logistic</h3>
+            <p>Logistic Regression</p>
+        </a>
+
+        <a href="{% url 'purchasing_power_svm:Index' %}" class="model-box">
+            <i class="fa-solid fa-money-bill-trend-up"></i>
+            <h3>Purchasing Power SVM</h3>
+            <p>Support Vector Machine</p>
+        </a>
+
+        <a href="{% url 'result_predictor_svm:Index' %}" class="model-box">
+            <i class="fa-solid fa-square-poll-vertical"></i>
+            <h3>Result Predictor</h3>
+            <p>Support Vector Machine</p>
+        </a>
+
+        <a href="{% url 'sales_medium_lasso:Index' %}" class="model-box">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Sales Medium Predictor</h3>
+            <p>Lasso Regression</p>
+        </a>
+
+        <a href="{% url 'sales_category_knn:Index' %}" class="model-box">
+            <i class="fa-solid fa-chart-pie"></i>
+            <h3>Sales Category Prediction</h3>
+            <p>KNN Algorithm</p>
+        </a>
+
+        <a href="{% url 'sports_prediction_knn:Index' %}" class="model-box">
+            <i class="fa-solid fa-volleyball"></i>
+            <h3>Sports Prediction</h3>
+            <p>KNN Algorithm</p>
+        </a>
+
+        <a href="{% url 'weather_prediction_logistic_regression:Index' %}" class="model-box">
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+            <h3>Weather Prediction</h3>
+            <p>Logistic Regression</p>
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

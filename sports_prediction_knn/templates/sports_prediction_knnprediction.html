@@ -1,0 +1,72 @@
+{% extends 'sports_prediction_knnbase.html' %}
+
+{% block title %}Sports Prediction{% endblock %}
+{% block page_title %}Sports Prediction{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-trophy"></i>
+                Player Details
+            </h2>
+            <p>Enter age and gender to predict the suitable sport.</p>
+        </div>
+
+        <form method="post" class="prediction-form">
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" name="Age" placeholder="Example: 32" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select name="Gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-brain"></i>
+                Predict Sport
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result %}
+
+    <div class="result-card">
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-medal"></i>
+        </div>
+
+        <h2>Predicted Sport</h2>
+
+        <h1>{{ result }}</h1>
+
+        <p>
+            The KNN model predicted this sport category based on age and gender.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

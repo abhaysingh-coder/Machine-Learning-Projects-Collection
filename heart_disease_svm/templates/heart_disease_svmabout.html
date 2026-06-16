@@ -1,0 +1,243 @@
+{% extends 'heart_disease_svmbase.html' %}
+
+{% block title %}
+About Heart Disease SVM
+{% endblock %}
+
+{% block page_title %}
+About Model
+{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+
+    <div class="about-hero">
+
+        <div class="hero-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <h1>Heart Disease Prediction Using SVM</h1>
+
+        <p>
+            This Machine Learning application uses Support Vector Machine (SVM)
+            Classification to predict whether a patient is at risk of heart disease
+            based on important medical parameters.
+        </p>
+
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h3>Project Objective</h3>
+
+            <p>
+                To identify heart disease risk at an early stage using
+                machine learning and healthcare data.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Algorithm Used</h3>
+
+            <p>
+                Support Vector Machine (SVM) Classification is used
+                to classify patients into disease and non-disease categories.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>Input Features</h3>
+
+            <p>
+                Age, Sex, Blood Pressure, Cholesterol,
+                and Maximum Heart Rate.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>Prediction Output</h3>
+
+            <p>
+                Predicts whether a patient is likely to have
+                heart disease or not.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="dataset-section">
+
+    <div class="dataset-card">
+
+        <h2>
+            <i class="fa-solid fa-table"></i>
+            Dataset Information
+        </h2>
+
+        <div class="dataset-grid">
+
+            <div>
+                <span>Features</span>
+                <h3>5</h3>
+            </div>
+
+            <div>
+                <span>Target</span>
+                <h3>Heart Disease</h3>
+            </div>
+
+            <div>
+                <span>Problem Type</span>
+                <h3>Classification</h3>
+            </div>
+
+            <div>
+                <span>Algorithm</span>
+                <h3>SVM</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="medical-section">
+
+    <div class="medical-card">
+
+        <h2>
+            <i class="fa-solid fa-notes-medical"></i>
+            Medical Parameters
+        </h2>
+
+        <div class="medical-grid">
+
+            <div>
+                <h4>Age</h4>
+                <p>Patient age in years.</p>
+            </div>
+
+            <div>
+                <h4>Sex</h4>
+                <p>Male (1) or Female (0).</p>
+            </div>
+
+            <div>
+                <h4>Blood Pressure</h4>
+                <p>Systolic blood pressure measurement.</p>
+            </div>
+
+            <div>
+                <h4>Cholesterol</h4>
+                <p>Blood cholesterol level.</p>
+            </div>
+
+            <div>
+                <h4>Maximum Heart Rate</h4>
+                <p>Highest heart rate achieved during activity.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="technology-section">
+
+    <h2>Technology Stack</h2>
+
+    <div class="technology-grid">
+
+        <div class="tech-card">
+            <i class="fa-brands fa-python"></i>
+            <span>Python</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-server"></i>
+            <span>Django</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-brain"></i>
+            <span>Scikit-Learn</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-table"></i>
+            <span>Pandas</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-calculator"></i>
+            <span>NumPy</span>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-floppy-disk"></i>
+            <span>Joblib</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="developer-section">
+
+    <div class="developer-card">
+
+        <div class="developer-avatar">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <h2>Developer</h2>
+
+        <h3>Abhay Singh</h3>
+
+        <p>
+            Computer Science Engineer, Python Developer,
+            Django Developer, and Machine Learning Enthusiast.
+        </p>
+
+        <div class="developer-links">
+
+            <a href="https://github.com/abhaysingh-coder" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
+
+            <a href="mailto:srinetabhaysingh14@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

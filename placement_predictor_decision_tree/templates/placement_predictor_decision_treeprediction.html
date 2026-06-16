@@ -1,0 +1,81 @@
+{% extends 'placement_predictor_decision_treebase.html' %}
+
+{% block title %}Placement Prediction{% endblock %}
+{% block page_title %}Placement Prediction{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Details
+            </h2>
+            <p>Enter student details to predict placement status.</p>
+        </div>
+
+        <form method="post" class="prediction-form">
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Hours Studied</label>
+                    <input type="number" name="Hours_Studied" placeholder="Example: 1" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Attendance</label>
+                    <input type="number" name="Attendance" placeholder="Example: 50" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Previous Score</label>
+                    <input type="number" name="Previous_Score" placeholder="Example: 40" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-brain"></i>
+                Predict Placement
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 1 %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Student May Get Placed</h2>
+        <p>The Decision Tree model predicts that this student is likely to get placed.</p>
+
+        {% else %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <h2>Student May Not Get Placed</h2>
+        <p>The Decision Tree model predicts that this student is not likely to get placed.</p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

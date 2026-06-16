@@ -1,0 +1,179 @@
+{% extends 'placement_predictor_decision_treebase.html' %}
+
+{% block title %}
+Placement Predictor Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Placement Prediction System</h1>
+
+            <p>
+                Predict whether a student is likely to get placed based on
+                academic performance, aptitude skills, and educational details
+                using the Decision Tree Algorithm.
+            </p>
+
+            <a href="{% url 'placement_predictor_decision_tree:Prediction' %}" class="start-btn">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                Start Prediction
+
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-user-graduate"></i>
+
+        <h3>Students</h3>
+
+        <p>Placement Analysis</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-code-branch"></i>
+
+        <h3>Algorithm</h3>
+
+        <p>Decision Tree</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Dataset</h3>
+
+        <p>Student Placement Dataset</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>Model Type</h3>
+
+        <p>Classification</p>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Available functionalities in the Placement Prediction System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-book"></i>
+
+            <h3>Academic Analysis</h3>
+
+            <p>
+                Analyze student academic performance and qualifications.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <h3>Placement Eligibility</h3>
+
+            <p>
+                Predict whether a student is likely to be placed.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Prediction</h3>
+
+            <p>
+                Get placement results instantly using Machine Learning.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Decision Tree Model</h3>
+
+            <p>
+                Smart classification based on student data.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This project predicts student placement opportunities using
+            academic and skill-based parameters. The Decision Tree model
+            identifies patterns in previous placement data to determine
+            the likelihood of successful placement.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

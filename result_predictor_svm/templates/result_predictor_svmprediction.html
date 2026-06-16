@@ -1,0 +1,91 @@
+{% extends 'result_predictor_svmbase.html' %}
+
+{% block title %}Result Prediction{% endblock %}
+{% block page_title %}Result Prediction{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-graduation-cap"></i>
+                Student Learning Activity
+            </h2>
+            <p>Enter student activity details to predict result status.</p>
+        </div>
+
+        <form method="post" class="prediction-form">
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Study Hours Per Week</label>
+                    <input type="number" name="StudyHoursPerWeek" placeholder="Example: 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Videos Watched</label>
+                    <input type="number" name="VideosWatched" placeholder="Example: 20" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Assignments Completed</label>
+                    <input type="number" name="AssignmentsCompleted" placeholder="Example: 8" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Forum Activity</label>
+                    <input type="number" name="ForumActivity" placeholder="Example: 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Days Inactive</label>
+                    <input type="number" name="DaysInactive" placeholder="Example: 2" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-brain"></i>
+                Predict Result
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 0 %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Student May Pass</h2>
+        <p>The SVM model predicts that this student may pass.</p>
+
+        {% else %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <h2>Student May Fail</h2>
+        <p>The SVM model predicts that this student may fail.</p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'purchasing_power_svmbase.html' %}
+
+{% block title %}Purchase Prediction{% endblock %}
+{% block page_title %}Purchase Prediction{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+
+            <h2>
+                <i class="fa-solid fa-user"></i>
+                Customer Details
+            </h2>
+
+            <p>
+                Enter customer information to predict purchasing behavior.
+            </p>
+
+        </div>
+
+        <form method="post" class="prediction-form">
+
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>Age</label>
+
+                    <input
+                        type="number"
+                        name="Age"
+                        placeholder="Example: 19"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Estimated Salary</label>
+
+                    <input
+                        type="number"
+                        name="EstimatedSalary"
+                        placeholder="Example: 19000"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+
+                <i class="fa-solid fa-brain"></i>
+
+                Predict Purchase
+
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 1 %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Customer May Purchase</h2>
+
+        <p>
+            The SVM model predicts that the customer is likely to purchase the product.
+        </p>
+
+        {% else %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <h2>Customer May Not Purchase</h2>
+
+        <p>
+            The SVM model predicts that the customer is unlikely to purchase the product.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

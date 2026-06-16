@@ -1,0 +1,46 @@
+{% extends 'purchasing_power_logistic_regressionbase.html' %}
+
+{% block title %}Error{% endblock %}
+{% block page_title %}System Error{% endblock %}
+
+{% block content %}
+
+<section class="error-section">
+    <div class="error-card">
+
+        <div class="error-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+
+        <h1>Oops! Something Went Wrong</h1>
+
+        <p>
+            The system encountered an unexpected error while processing your request.
+        </p>
+
+        {% if error %}
+        <div class="error-details">
+            <h3>
+                <i class="fa-solid fa-bug"></i>
+                Error Details
+            </h3>
+            <pre>{{ error }}</pre>
+        </div>
+        {% endif %}
+
+        <div class="error-actions">
+            <a href="{% url 'purchasing_power_logistic_regression:Index' %}" class="primary-btn">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="{% url 'purchasing_power_logistic_regression:Prediction' %}" class="secondary-btn">
+                <i class="fa-solid fa-rotate-right"></i>
+                Try Again
+            </a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

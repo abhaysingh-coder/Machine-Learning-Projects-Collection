@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Weather Prediction Logistic Regression
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'CSS/weather_prediction_logistic_regression.css' %}">
+
+    <link rel="shortcut icon"
+        href="{% static 'Image/weather_prediction_logistic_regression_favicon.png' %}"
+        type="image/x-icon">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span>Weather Prediction</span>
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="{% url 'weather_prediction_logistic_regression:Index' %}">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'weather_prediction_logistic_regression:Prediction' %}">
+                    <i class="fa-solid fa-cloud-rain"></i>
+                    Prediction
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'weather_prediction_logistic_regression:About' %}">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'mainapp:Index' %}">
+                    <i class="fa-solid fa-house"></i>
+                    Back
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <div class="main-content">
+
+        <header class="topbar">
+
+            <h2>
+                {% block page_title %}
+                Weather Prediction
+                {% endblock %}
+            </h2>
+
+            <a href="{% url 'mainapp:Index' %}" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </a>
+
+        </header>
+
+        <main class="content">
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

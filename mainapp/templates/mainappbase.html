@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        ML Models Portfolio
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'Image/favicon.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="/" class="logo">
+                <i class="fa-solid fa-brain"></i>
+                ML Portfolio
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{% url 'mainapp:Index' %}">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'mainapp:Models' %}">
+                        <i class="fa-solid fa-microchip"></i>
+                        Models
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'mainapp:About' %}">
+                        <i class="fa-solid fa-user"></i>
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <h2>Abhay Singh</h2>
+
+            <p>
+                Machine Learning | Data Science | Python Developer
+            </p>
+
+            <div class="social-links">
+
+                <a href="https://github.com/abhaysingh-coder" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:srinetabhaysingh14@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Abhay Singh. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+{% extends 'weather_prediction_logistic_regressionbase.html' %}
+
+{% block title %}Weather Prediction Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Weather Prediction Using Logistic Regression</h1>
+
+            <p>
+                Predict weather conditions based on atmospheric data such as
+                temperature, humidity, wind speed, and pressure using the
+                Logistic Regression Machine Learning Algorithm.
+            </p>
+
+            <a href="{% url 'weather_prediction_logistic_regression:Prediction' %}" class="start-btn">
+                <i class="fa-solid fa-cloud-sun"></i>
+                Start Prediction
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-cloud-rain"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <i class="fa-solid fa-temperature-half"></i>
+        <h3>Weather Data</h3>
+        <p>Climate Analysis</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Algorithm</h3>
+        <p>Logistic Regression</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Dataset</h3>
+        <p>Weather Records Dataset</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-cloud"></i>
+        <h3>Model Type</h3>
+        <p>Classification</p>
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Explore the capabilities of the Weather Prediction System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+
+            <h3>Weather Analysis</h3>
+
+            <p>
+                Analyze atmospheric conditions and weather indicators.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-cloud-bolt"></i>
+
+            <h3>Weather Prediction</h3>
+
+            <p>
+                Predict weather conditions using machine learning.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Results</h3>
+
+            <p>
+                Generate predictions instantly from weather data.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Machine Learning</h3>
+
+            <p>
+                Smart classification using Logistic Regression.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This Weather Prediction System uses Logistic Regression to
+            classify weather conditions based on environmental and
+            atmospheric parameters. It helps forecast likely weather
+            outcomes using historical climate data.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

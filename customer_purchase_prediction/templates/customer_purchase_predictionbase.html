@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Customer Purchase Prediction
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'CSS/customer_purchase_prediction.css' %}">
+
+    <link rel="icon" href="{% static 'Image/customer_purchase_prediction_favicon.png' %}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span>
+                Customer Purchase
+            </span>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="{% url 'customer_purchase_prediction:Index' %}">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'customer_purchase_prediction:Prediction' %}">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Prediction
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'customer_purchase_prediction:About' %}">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'mainapp:Index' %}">
+                    <i class="fa-solid fa-house"></i>
+                    Back
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Area -->
+
+    <div class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div>
+                <h2>
+                    {% block page_title %}
+                    Customer Purchase Prediction
+                    {% endblock %}
+                </h2>
+            </div>
+
+            <a href="{% url 'mainapp:Index' %}" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </a>
+
+        </header>
+
+        <!-- Content -->
+
+        <main class="content">
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

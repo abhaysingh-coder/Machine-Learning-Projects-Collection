@@ -1,0 +1,143 @@
+{% extends 'iris_flower_knnbase.html' %}
+
+{% block title %}
+Iris Flower KNN Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Iris Flower Classification Using KNN</h1>
+
+            <p>
+                Predict Iris flower species using the K-Nearest Neighbors (KNN)
+                Classification Algorithm based on flower measurements.
+            </p>
+
+            <a href="{% url 'iris_flower_knn:Prediction' %}" class="start-btn">
+                <i class="fa-solid fa-seedling"></i>
+                Start Prediction
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-spa"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Flower Species</h3>
+        <p>3 Classes</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-network-wired"></i>
+        <h3>Algorithm</h3>
+        <p>K-Nearest Neighbors</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Dataset</h3>
+        <p>Iris Dataset</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Model Type</h3>
+        <p>Classification</p>
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Available functionalities in the Iris Flower KNN Classification System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <i class="fa-solid fa-ruler"></i>
+            <h3>Flower Measurements</h3>
+            <p>
+                Enter sepal and petal measurements for prediction.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Species Prediction</h3>
+            <p>
+                Predict Setosa, Versicolor, or Virginica species.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Instant Results</h3>
+            <p>
+                Receive immediate classification from the KNN model.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Machine Learning</h3>
+            <p>
+                KNN algorithm identifies the nearest matching flower samples.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            The Iris Flower Classification project is a classic machine learning
+            classification problem. The KNN algorithm predicts flower species
+            by comparing the entered flower measurements with similar flowers
+            present in the training dataset.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

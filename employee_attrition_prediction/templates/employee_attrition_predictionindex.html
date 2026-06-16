@@ -1,0 +1,147 @@
+{% extends 'employee_attrition_predictionbase.html' %}
+
+{% block title %}
+Employee Attrition Prediction Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Employee Attrition Prediction</h1>
+
+            <p>
+                Predict whether an employee is likely to leave the organization
+                using Machine Learning and Random Forest Classification.
+            </p>
+
+            <a href="{% url 'employee_attrition_prediction:Prediction' %}" class="start-btn">
+                <i class="fa-solid fa-play"></i>
+                Start Prediction
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-user-tie"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>HR Analytics</h3>
+        <p>Employee Retention Analysis</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-brain"></i>
+        <h3>Algorithm</h3>
+        <p>Random Forest</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Dataset</h3>
+        <p>Employee Attrition Dataset</p>
+    </div>
+
+    <div class="stat-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Prediction Type</h3>
+        <p>Classification Model</p>
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Key functionalities available in Employee Attrition Prediction System
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Employee Analysis</h3>
+
+            <p>
+                Analyze employee information and workplace factors.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-person-walking-arrow-right"></i>
+
+            <h3>Attrition Prediction</h3>
+
+            <p>
+                Predict whether an employee is likely to leave the company.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>Instant Results</h3>
+
+            <p>
+                Get quick and accurate prediction results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Model
+        </h2>
+
+        <p>
+            Employee Attrition Prediction helps organizations identify employees
+            who may be at risk of leaving. By analyzing various employee-related
+            factors, HR teams can take proactive actions to improve retention,
+            increase employee satisfaction, and reduce turnover costs.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

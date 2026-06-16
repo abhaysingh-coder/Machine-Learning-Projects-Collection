@@ -1,0 +1,86 @@
+{% extends 'sales_category_knnbase.html' %}
+
+{% block title %}Sales Category Prediction{% endblock %}
+{% block page_title %}Sales Category Prediction{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-chart-line"></i>
+                Sales Information
+            </h2>
+            <p>Enter sales details to predict the sales category.</p>
+        </div>
+
+        <form method="post" class="prediction-form">
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="number" name="Price" placeholder="Example: 100" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Discount</label>
+                    <input type="number" name="Discount" placeholder="Example: 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Ad Spend</label>
+                    <input type="number" name="AdSpend" placeholder="Example: 2000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Visitors</label>
+                    <input type="number" name="Visitors" placeholder="Example: 150" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-brain"></i>
+                Predict Sales Category
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 1 %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>High Sales Category</h2>
+        <p>The KNN model predicts that this record belongs to the high sales category.</p>
+
+        {% else %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <h2>Low Sales Category</h2>
+        <p>The KNN model predicts that this record belongs to the low sales category.</p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

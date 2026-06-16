@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Loan Approval Random Forest
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'CSS/loan_approval_random_forest.css' %}">
+
+    <link rel="icon" href="{% static 'Image/loan_approval_random_forest_favicon.png' %}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-money-bill-trend-up"></i>
+            <span>Loan Approval RF</span>
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="{% url 'loan_approval_random_forest:Index' %}">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'loan_approval_random_forest:Prediction' %}">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Prediction
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'loan_approval_random_forest:About' %}">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'mainapp:Index' %}">
+                    <i class="fa-solid fa-house"></i>
+                    Back
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <div class="main-content">
+
+        <header class="topbar">
+
+            <h2>
+                {% block page_title %}
+                Loan Approval Random Forest
+                {% endblock %}
+            </h2>
+
+            <a href="{% url 'mainapp:Index' %}" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </a>
+
+        </header>
+
+        <main class="content">
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

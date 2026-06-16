@@ -1,0 +1,178 @@
+{% extends 'purchasing_power_logistic_regressionbase.html' %}
+
+{% block title %}
+Purchasing Power Prediction Dashboard
+{% endblock %}
+
+{% block page_title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Purchasing Power Prediction System</h1>
+
+            <p>
+                Predict whether a customer is likely to purchase a product
+                based on Age and Estimated Salary using Logistic Regression.
+            </p>
+
+            <a href="{% url 'purchasing_power_logistic_regression:Prediction' %}" class="start-btn">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Start Prediction
+
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-users"></i>
+
+        <h3>Customers</h3>
+
+        <p>Purchase Analysis</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-simple"></i>
+
+        <h3>Algorithm</h3>
+
+        <p>Logistic Regression</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Dataset</h3>
+
+        <p>Customer Purchase Dataset</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        <h3>Model Type</h3>
+
+        <p>Classification</p>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Available functionalities in the Purchasing Power Prediction System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Customer Analysis</h3>
+
+            <p>
+                Analyze customer age and salary information.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <h3>Purchasing Behavior</h3>
+
+            <p>
+                Determine whether a customer is likely to purchase.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Prediction</h3>
+
+            <p>
+                Generate predictions instantly using Logistic Regression.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Machine Learning</h3>
+
+            <p>
+                Smart classification based on customer purchasing patterns.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This project predicts whether a customer can purchase a product
+            based on Age and Estimated Salary. Logistic Regression learns
+            customer purchasing patterns and classifies customers into
+            purchase or non-purchase categories.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

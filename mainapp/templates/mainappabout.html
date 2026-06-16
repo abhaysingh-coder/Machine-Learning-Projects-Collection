@@ -1,0 +1,95 @@
+{% extends 'mainappbase.html' %}
+{% load static %}
+
+{% block title %}
+About | ML Models Portfolio
+{% endblock %}
+
+{% block content %}
+
+<section class="about-hero">
+    <div class="about-content">
+        <span class="about-badge">
+            <i class="fa-solid fa-user-graduate"></i>
+            About Project
+        </span>
+
+        <h1>Machine Learning Models Portfolio</h1>
+
+        <p>
+            This website is a Django based Machine Learning portfolio that contains
+            multiple prediction and classification models in one place.
+        </p>
+    </div>
+</section>
+
+<section class="about-section">
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Project Purpose</h3>
+            <p>
+                The main purpose of this project is to showcase different Machine
+                Learning models with a clean web interface where users can open
+                and test each model.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Technologies Used</h3>
+            <p>
+                This project is built using Python, Django, HTML, CSS, JavaScript,
+                Scikit-Learn, Pandas, NumPy, and Joblib.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>ML Algorithms</h3>
+            <p>
+                It includes models based on Linear Regression, Logistic Regression,
+                Decision Tree, Random Forest, KNN, SVM, and Lasso Regression.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="developer-section">
+
+    <div class="developer-card">
+
+        <div class="developer-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="developer-info">
+            <span>Developer</span>
+            <h2>Abhay Singh</h2>
+            <p>
+                I am a Computer Science student interested in Python, Django,
+                Machine Learning, Data Science, and web development.
+            </p>
+
+            <div class="developer-links">
+                <a href="https://github.com/abhaysingh-coder" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a>
+
+                <a href="mailto:srinetabhaysingh14@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    Email
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

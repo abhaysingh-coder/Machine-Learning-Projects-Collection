@@ -1,0 +1,73 @@
+{% extends 'sales_medium_lassobase.html' %}
+
+{% block title %}Sales Prediction{% endblock %}
+{% block page_title %}Sales Prediction{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+            <h2>
+                <i class="fa-solid fa-chart-line"></i>
+                Advertising Details
+            </h2>
+            <p>Enter advertising spend details to predict sales.</p>
+        </div>
+
+        <form method="post" class="prediction-form">
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>TV</label>
+                    <input type="number" step="0.01" name="TV" placeholder="Example: 102" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Radio</label>
+                    <input type="number" step="0.01" name="Radio" placeholder="Example: 25" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Newspaper</label>
+                    <input type="number" step="0.01" name="Newspaper" placeholder="Example: 34" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+                <i class="fa-solid fa-brain"></i>
+                Predict Sales
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+        </div>
+
+        <h2>Predicted Sales</h2>
+
+        <h1>{{ result }}</h1>
+
+        <p>
+            The Lasso Regression model predicted the estimated sales value.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

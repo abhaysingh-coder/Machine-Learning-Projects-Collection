@@ -1,0 +1,129 @@
+{% extends 'employee_attrition_predictionbase.html' %}
+
+{% block title %}
+Employee Attrition Prediction
+{% endblock %}
+
+{% block page_title %}
+Employee Attrition Prediction
+{% endblock %}
+
+{% block content %}
+
+<div class="prediction-container">
+
+    <div class="prediction-card">
+
+        <div class="prediction-header">
+
+            <h2>
+                <i class="fa-solid fa-user-tie"></i>
+                Employee Information
+            </h2>
+
+            <p>
+                Enter employee details to predict whether the employee may leave the company.
+            </p>
+
+        </div>
+
+        <form method="post" class="prediction-form">
+
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" name="Age" placeholder="Enter Age" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Salary</label>
+                    <input type="number" name="Salary" placeholder="Enter Salary" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Job Satisfaction</label>
+                    <select name="JobSatisfaction" required>
+                        <option value="">Select Rating</option>
+                        <option value="1">1 - Very Low</option>
+                        <option value="2">2 - Low</option>
+                        <option value="3">3 - Medium</option>
+                        <option value="4">4 - High</option>
+                        <option value="5">5 - Very High</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Work Hours</label>
+                    <input type="number" name="WorkHours" placeholder="Enter Work Hours" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Experience</label>
+                    <input type="number" name="Experience" placeholder="Enter Experience" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Department</label>
+                    <select name="Department" required>
+                        <option value="">Select Department</option>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Management">Management</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">
+
+                <i class="fa-solid fa-brain"></i>
+
+                Predict Attrition
+
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if result is not None %}
+
+    <div class="result-card">
+
+        {% if result == 1 %}
+
+        <div class="result-icon danger">
+            <i class="fa-solid fa-person-walking-arrow-right"></i>
+        </div>
+
+        <h2>Employee May Leave</h2>
+
+        <p>
+            The Random Forest model predicts that this employee may leave the organization.
+        </p>
+
+        {% else %}
+
+        <div class="result-icon success">
+            <i class="fa-solid fa-user-check"></i>
+        </div>
+
+        <h2>Employee May Stay</h2>
+
+        <p>
+            The Random Forest model predicts that this employee is likely to stay.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,171 @@
+{% extends 'mainappbase.html' %}
+{% load static %}
+
+{% block title %}
+ML Models Portfolio
+{% endblock %}
+
+{% block content %}
+
+<section class="home-hero">
+
+    <div class="home-hero-content">
+
+        <span class="hero-badge">
+            <i class="fa-solid fa-brain"></i>
+            Machine Learning Portfolio
+        </span>
+
+        <h1>
+            Explore My Machine Learning Models
+        </h1>
+
+        <p>
+            A collection of 17 machine learning projects built using Python,
+            Django, Scikit-Learn, and different ML algorithms.
+        </p>
+
+        <a href="#models" class="hero-btn">
+            View All Models
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="models-section" id="models">
+
+    <div class="section-heading">
+        <span>Projects</span>
+        <h2>Available ML Models</h2>
+        <p>Select any model below and test its prediction system.</p>
+    </div>
+
+    <div class="models-container">
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-car"></i></div>
+            <h3>Car Price Prediction</h3>
+            <p>Simple Linear Regression model for predicting car prices.</p>
+            <a href="{% url 'car_price_prediction:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>Customer Purchase Prediction</h3>
+            <p>Logistic Regression model for predicting purchase decisions.</p>
+            <a href="{% url 'customer_purchase_prediction:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>Employee Attrition Prediction</h3>
+            <p>Random Forest model for predicting employee attrition.</p>
+            <a href="{% url 'employee_attrition_prediction:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Heart Disease Prediction</h3>
+            <p>Logistic Regression model for heart disease prediction.</p>
+            <a href="{% url 'heart_disease_logistic_regression:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <h3>Heart Disease SVM</h3>
+            <p>Support Vector Machine model for health classification.</p>
+            <a href="{% url 'heart_disease_svm:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>Iris Flower Decision Tree</h3>
+            <p>Decision Tree model for Iris flower classification.</p>
+            <a href="{% url 'iris_flower_decision_tree:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Iris Flower KNN</h3>
+            <p>KNN algorithm for Iris flower species classification.</p>
+            <a href="{% url 'iris_flower_knn:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <h3>Loan Approval Decision Tree</h3>
+            <p>Decision Tree model for loan approval prediction.</p>
+            <a href="{% url 'loan_approval_decision_tree:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <h3>Loan Approval Random Forest</h3>
+            <p>Random Forest model for loan approval classification.</p>
+            <a href="{% url 'loan_approval_random_forest:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Placement Predictor</h3>
+            <p>Decision Tree model for student placement prediction.</p>
+            <a href="{% url 'placement_predictor_decision_tree:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-wallet"></i></div>
+            <h3>Purchasing Power Logistic</h3>
+            <p>Logistic Regression model for purchasing power prediction.</p>
+            <a href="{% url 'purchasing_power_logistic_regression:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <h3>Purchasing Power SVM</h3>
+            <p>SVM model for purchasing power classification.</p>
+            <a href="{% url 'purchasing_power_svm:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-square-poll-vertical"></i></div>
+            <h3>Result Predictor</h3>
+            <p>Support Vector Machine model for result prediction.</p>
+            <a href="{% url 'result_predictor_svm:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Sales Medium Predictor</h3>
+            <p>Lasso Regression model for sales prediction.</p>
+            <a href="{% url 'sales_medium_lasso:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Sales Category Prediction</h3>
+            <p>KNN model for sales category classification.</p>
+            <a href="{% url 'sales_category_knn:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-volleyball"></i></div>
+            <h3>Sports Prediction</h3>
+            <p>KNN algorithm model for sports prediction.</p>
+            <a href="{% url 'sports_prediction_knn:Index' %}">Open Model</a>
+        </div>
+
+        <div class="model-card">
+            <div class="model-icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+            <h3>Weather Prediction</h3>
+            <p>Logistic Regression model for weather prediction.</p>
+            <a href="{% url 'weather_prediction_logistic_regression:Index' %}">Open Model</a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

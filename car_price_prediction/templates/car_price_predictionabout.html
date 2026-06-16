@@ -1,0 +1,72 @@
+{% extends 'car_price_predictionbase.html' %}
+
+{% block title %}
+About | Car Price Prediction
+{% endblock %}
+
+{% block page_title %}
+About Model
+{% endblock %}
+
+{% block content %}
+
+<section class="about-panel">
+
+    <div class="about-model-card">
+
+        <div class="about-icon">
+            <i class="fa-solid fa-car-side"></i>
+        </div>
+
+        <h1>Car Price Prediction Model</h1>
+
+        <p>
+            This model predicts the estimated selling price of a car using
+            Machine Learning based on car age, kilometers driven, fuel type,
+            owner type, mileage, and engine size.
+        </p>
+
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-box">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Input Features</h3>
+            <p>
+                Car Age, KM Driven, Fuel Type, Owner Type,
+                Mileage, and Engine Size.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Target Output</h3>
+            <p>
+                The model predicts the estimated car price in Indian Rupees.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Algorithm Used</h3>
+            <p>
+                Simple Linear Regression is used to learn the relationship
+                between car features and price.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <i class="fa-solid fa-code"></i>
+            <h3>Technology Stack</h3>
+            <p>
+                Python, Django, Pandas, NumPy, Scikit-Learn, Joblib,
+                HTML, CSS, and JavaScript.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,174 @@
+{% extends 'sales_category_knnbase.html' %}
+
+{% block title %}Sales Category KNN Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-banner">
+
+    <div class="banner-content">
+
+        <div class="banner-text">
+
+            <span class="banner-badge">
+                Machine Learning Project
+            </span>
+
+            <h1>Sales Category Prediction Using KNN</h1>
+
+            <p>
+                Predict sales categories using the K-Nearest Neighbors (KNN)
+                algorithm. Analyze sales performance and classify products
+                into different sales categories based on business metrics.
+            </p>
+
+            <a href="{% url 'sales_category_knn:Prediction' %}" class="start-btn">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Start Prediction
+
+            </a>
+
+        </div>
+
+        <div class="banner-icon">
+            <i class="fa-solid fa-sack-dollar"></i>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <h3>Sales Data</h3>
+
+        <p>Business Analytics</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-network-wired"></i>
+
+        <h3>Algorithm</h3>
+
+        <p>K-Nearest Neighbors</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Dataset</h3>
+
+        <p>Sales Records Dataset</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        <h3>Model Type</h3>
+
+        <p>Classification</p>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-header">
+
+        <h2>Project Features</h2>
+
+        <p>
+            Explore the capabilities of the Sales Category Prediction System.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>Sales Analysis</h3>
+
+            <p>
+                Analyze sales trends and product performance.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <h3>Category Prediction</h3>
+
+            <p>
+                Predict sales categories based on business indicators.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Fast Prediction</h3>
+
+            <p>
+                Generate instant predictions using KNN classification.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Machine Learning</h3>
+
+            <p>
+                Smart classification using nearest neighbor analysis.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="overview-section">
+
+    <div class="overview-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            The Sales Category Prediction System uses the K-Nearest Neighbors
+            algorithm to classify sales data into predefined categories.
+            This helps businesses understand sales performance and make
+            data-driven decisions.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}
