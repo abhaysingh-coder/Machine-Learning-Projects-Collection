@@ -234,7 +234,7 @@ Computer Science Engineer | Python Developer | Django Developer | Machine Learni
 
 📧 Email: [srinetabhaysingh14@gmail.com](mailto:srinetabhaysingh14@gmail.com)
 
-🌐 Portfolio: https://portfolio-m1il.onrender.com
+🌐 Portfolio: https://portfolio-qjye.onrender.com/
 
 🐙 GitHub: https://github.com/abhaysingh-coder
 
