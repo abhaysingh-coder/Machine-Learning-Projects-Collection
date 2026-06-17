@@ -6,7 +6,7 @@ This repository serves as a practical portfolio showcasing real-world Machine Le
 
 ## 🚀 Live Portfolio
 
-🌐 Portfolio Website: https://portfolio-m1il.onrender.com
+🌐 Portfolio Website: https://portfolio-qjye.onrender.com/
 
 ## 📚 Projects Included
 
@@ -234,7 +234,7 @@ Computer Science Engineer | Python Developer | Django Developer | Machine Learni
 
 📧 Email: [srinetabhaysingh14@gmail.com](mailto:srinetabhaysingh14@gmail.com)
 
-🌐 Portfolio: https://portfolio-m1il.onrender.com
+🌐 Portfolio: https://portfolio-qjye.onrender.com/
 
 🐙 GitHub: https://github.com/abhaysingh-coder
 
