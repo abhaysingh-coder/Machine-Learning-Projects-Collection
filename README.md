@@ -6,7 +6,7 @@ This repository serves as a practical portfolio showcasing real-world Machine Le
 
 ## 🚀 Live Portfolio
 
-🌐 Portfolio Website: https://portfolio-m1il.onrender.com
+🌐 Portfolio Website: https://portfolio-qjye.onrender.com/
 
 ## 📚 Projects Included
 
